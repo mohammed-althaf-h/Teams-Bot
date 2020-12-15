@@ -1,0 +1,10 @@
+selenium==3.141.0
+times==0.7
+certifi==2020.6.20
+import==0.0.1
+chardet==3.0.4
+Discord-Webhooks==1.0.4
+idna==2.8
+requests==2.21.0
+schedule==0.6.0
+urllib3==1.24.3
