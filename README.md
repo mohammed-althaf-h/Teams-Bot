@@ -35,7 +35,7 @@ https://www.python.org/downloads/
 There are few things you got configure before running this bot.
 
  - Open Microsoft teams on your browser https://teams.microsoft.com/, login to your account, change the dashboard view to list view (from grid view), so that your classes are displayed in a list view. 
- - ![This is how list view looks like](https://imgur.com/a/G9WDQiC)
+ - ![This is how list view looks like](https://i.imgur.com/KXTl84h.jpg)
  - Open *msbot.py*, and put your microsoft teams credentials in the **user** & **pwd** field. 
  - Example - `user = ('myemail@email.com')`
  - `pwd = ('mypassword')`
