@@ -25,7 +25,7 @@ https://www.python.org/downloads/
 3. **Firefox**----> Click the menu button ≡ Menu , click Help and select About Firefox
 
 ## Add the Path of your webdriver to
-- > in `line 196` mah = webdriver.Chrome("`PASTE YOUR WEBDRIVER PATH HERE`",options=opt,service_log_path='NUL') #Example ("E:\WebDrivers\chromedriver.exe",options=opt,service_log_path='NUL')
+- in `line 196` mah = webdriver.Chrome("`PASTE YOUR WEBDRIVER PATH HERE`",options=opt,service_log_path='NUL') #Example ("E:\WebDrivers\chromedriver.exe",options=opt,service_log_path='NUL')
 
 ## Change this line if ur browser is not chrome...
 1. **for Edge**---- > `line 196` mah = webdriver.Edge("`PASTE YOUR WEBDRIVER PATH HERE`",options=opt,service_log_path='NUL') #Example ("E:\WebDrivers\chromedriver.exe",options=opt,service_log_path='NUL')
