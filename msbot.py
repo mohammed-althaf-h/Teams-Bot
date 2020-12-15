@@ -177,7 +177,7 @@ def joinclass(class_name,start_time,end_time):
 	time.sleep(class_running_time.seconds)
 
 
-	back = mah.find_element_by_xpath('/html/body/div[1]/div[2]/div[1]/app-bar/nav/ul/li[2]/button')
+	back = mah.find_element_by_id('app-bar-12a84919f-59d8-4441-a975-2a8c2643b741')
 	back.click() #come back to homepage
 	time.sleep(1)
 
