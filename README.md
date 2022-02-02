@@ -55,3 +55,7 @@ There are few things you got configure before running this bot.
  
  ## Run the bot
  - Run the bot `python msbot.py`
+ - Select 1 Modify Timetable and add your classes
+ - then select 3 Start bot
+
+Don't Start bot before adding your classes. It will throw a error..
