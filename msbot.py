@@ -46,10 +46,10 @@ def login():
     time.sleep(5)
 
 def createDB():
-	conn = sqlite3.connect('tt.db')
+	conn = sqlite3.connect('mah.db')
 	c=conn.cursor()
 	# Create table
-	c.execute('''CREATE TABLE tt(class text, start_time text, end_time text, day text)''')
+	c.execute('''CREATE TABLE mah(class text, start_time text, end_time text, day text)''')
 	conn.commit()
 	conn.close()
 	print("Created timetable Database")
@@ -71,7 +71,7 @@ def validate_day(inp):
 
 
 def add_timetable():
-	if(not(path.exists("tt.db"))):
+	if(not(path.exists("mah.db"))):
 			createDB()
 	op = int(input("1. Add class\n2. Done adding\nEnter option : "))
 	while(op==1):
@@ -92,11 +92,11 @@ def add_timetable():
 			end_time = input("Enter day (Monday/Tuesday/Wednesday..etc) : ")
 
 
-		conn = sqlite3.connect('tt.db')
+		conn = sqlite3.connect('mah.db')
 		c=conn.cursor()
 
 		# Insert a row of data
-		c.execute("INSERT INTO tt VALUES ('%s','%s','%s','%s')"%(name,start_time,end_time,day))
+		c.execute("INSERT INTO mah VALUES ('%s','%s','%s','%s')"%(name,start_time,end_time,day))
 
 		conn.commit()
 		conn.close()
@@ -107,9 +107,9 @@ def add_timetable():
 
 
 def view_timetable():
-	conn = sqlite3.connect('tt.db')
+	conn = sqlite3.connect('mah.db')
 	c=conn.cursor()
-	for row in c.execute('SELECT * FROM tt'):
+	for row in c.execute('SELECT * FROM mah'):
 		print(row)
 	conn.close()
 
@@ -127,7 +127,7 @@ def joinclass(class_name,start_time,end_time):
 	classes_available = mah.find_elements_by_class_name("name-channel-type")
 
 	for i in classes_available:
-		if class_name.lower() in i.get_attribute('innerHTML').lower():
+		if class_name.lower() in i.get_amahribute('innerHTML').lower():
 			print("JOINING CLASS ",class_name)
 			i.click()
 			break
@@ -204,9 +204,9 @@ def start_browser():
 
 
 def sched():
-	conn = sqlite3.connect('tt.db')
+	conn = sqlite3.connect('mah.db')
 	c=conn.cursor()
-	for row in c.execute('SELECT * FROM tt'):
+	for row in c.execute('SELECT * FROM mah'):
 		#schedule all classes
 		name = row[0]
 		start_time = row[1]
